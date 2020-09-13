@@ -1,0 +1,246 @@
+@font-face{
+    font-family : gilroy;
+    src: url('./font/Gilroy-ExtraBold.otf');
+}
+
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+button{
+    font-family: var(--ff-raleway);
+}
+
+::selection{
+    background:#ef108a;
+}
+
+:root{
+    
+    /* font-family  */
+    --ff-primary : 'Raleway', sans-serif;
+    --ff-secondary : 'gilroy', sans-serif;
+
+    /* font-weights */
+    --fw-reg : 300;
+    --fw-bold : 900;
+
+    /* colors */
+    --clr-light : #f5f5f5;
+    --clr-limegreen : #D6ED17;
+    --clr-dark : #222222;
+    --clr-darker-dark : #171717;
+
+    /* font-size */
+    --fs-h1: 3.5rem;
+    --fs-h2: 3rem;
+    --fs-h3: 1.8rem;
+    --fs-nav-logo: 2.1rem;
+    --fs-nav-links: 1.2rem;
+    --fs-body: 1.2rem;
+
+}
+
+@media (max-width :900px){
+    :root{
+        --fs-h1: 2.6rem;
+        --fs-h2: 2.25rem;
+        --fs-h3: 1.5rem;
+        --fs-nav-logo: 2rem;
+        --fs-nav-links: 1.2rem;
+        --fs-body: 1.125rem;
+    }
+}
+
+@media (max-width : 450px){
+    :root{
+        --fs-h1: 2.2rem;
+        --fs-h2: 1.8rem;
+        --fs-h3: 1.2rem;
+        --fs-nav-logo: 2rem;
+        /* --fs-nav-links: 1.2rem; */
+        --fs-body: 1.125rem;
+    }
+}
+
+@media (max-width: 360px){
+    :root{
+        --fs-h1: 2rem;
+        --fs-h2: 1.5rem;
+        --fs-h3: 1.1rem;
+        --fs-nav-logo: 1.5rem;
+        /* --fs-nav-links: 1.2rem; */
+        --fs-body: 1.125rem;
+    }
+}
+
+@media (max-width: 300px){
+    :root{
+        --fs-h1: 2rem;
+        --fs-h2: 1.25rem;
+        --fs-h3: 1rem;
+        --fs-nav-logo: 1.25rem;
+        /* --fs-nav-links: 1.2rem; */
+        --fs-body: 1rem;
+    }
+}
+
+a:link{
+    text-decoration: none;
+    color: var(--clr-light)
+}
+
+a:visited{
+    color: var(--clr-light)
+}
+
+a:hover{
+    color: var(--clr-limegreen);
+}
+
+body{
+background-color: var(--clr-darker-dark);
+color: var(--clr-light);
+font-family: var(--ff-primary);
+font-size: var(--fs-body);
+font-weight: var(--fw-reg);
+line-height: 1.6;
+}
+
+strong{
+    font-weight: var(--fw-bold);
+}
+
+img{
+    display: block;
+    width: 100%;
+}
+
+h1,h2,h3{
+line-height: 1.1;
+}
+
+h1{font-size: var(--fs-h1);}
+h2{font-size: var(--fs-h2);}
+h3{font-size: var(--fs-h3);}
+
+.section-title{
+    text-align: center;
+    font-family: var(--ff-secondary);
+    /* font-size: var(--fs-h1); */
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    font-family: var(--ff-secondary);
+    align-items: center;
+padding: 1em 0em 1em 0em;
+}
+
+.logo{
+    font-size: var(--fs-nav-logo);
+}
+
+.nav-button{
+    font-size: var(--fs-nav-links);
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+}
+
+@media(max-width: 1200px){
+    .nav-buttons{
+       width: 52%;
+    }
+}
+
+
+#about-me{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2em 0em 2em 0em;
+}
+
+.my-photo{
+    width: 400px;
+}
+
+.am-body{
+    padding: 0em 0em 0em 2em;
+    font-size: var(--fs-h3);
+}
+
+@media(max-width: 900px){
+    .nav-buttons{
+        display: none;
+    }
+    .my-photo{
+        width: 350px;
+    }
+
+    #about-me{
+        /* display: flex; */
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .am-body{
+        margin: 3em 2em 5em 2em;
+        padding: 0em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+#proj{
+padding: 5em 3em 5em 3em;
+}
+
+.proj-items{
+    margin: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+
+.proj-items{
+    background-color: var(--clr-limegreen);
+    color: var(--clr-dark);
+    min-width: 500px;
+    padding: 2em;
+    margin: 1em;
+    flex: 1;
+}
+
+.git-but{
+    margin: 3em 0em 3em 0em;
+    width: 125px;
+    height: 50px;
+    border: 2px solid var(--clr-dark);
+    background-color: transparent;
+    color: var(--clr-dark);
+
+}
+
+git-but a{
+    color: var(--clr-dark);
+}
+
+.web-but{
+    margin: 3em 0em 3em 0em;
+    width: 125px;
+    height: 50px;
+    border: 2px solid var(--clr-dark);
+    background-color: #222222;
+    color: var(--clr-dark);
+
+}
